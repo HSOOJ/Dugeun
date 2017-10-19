@@ -9,13 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Duguen">
+        <activity
+            android:name=".splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Duguen" />
+        <activity android:name=".countrymemo" />
+        <activity android:name=".onememo" />
+        <activity android:name=".exchange" />
+        <activity android:name=".cashbook" />
+        <activity android:name=".mappage" />
+        <activity android:name=".we_are"></activity>
     </application>
+
 
 </manifest>
