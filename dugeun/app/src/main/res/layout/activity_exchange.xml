@@ -1,9 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jiwon.newapp.exchange">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <!--
+        style="?android:attr/borderlessButtonStyle" : 버튼 그림자 삭제
+        sp는 보통 폰트에 사용
+        dip는 해상도에 상관없이 같은 크기
+
+       - imagebutton
+        adjustViewBounds: 이미지의 종횡비를 맞추기 위해 이미지 뷰의 크기를 적당히 조정할 것인가를 지정
+        scaleType: 이미지의 비율에 맞게 줄여서 ImageView 위젯에 넣음
+
+       - button
+         layout_weight: 비율 지정
+         layout_margin: 내부 공간
+
+
+      -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="3dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton_current"
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+            android:layout_margin="5dip"
+            android:adjustViewBounds="true"
+            android:background="@drawable/southkorea"
+            android:scaleType="fitCenter"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textValue"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:maxLength="12"
+                android:text="0"
+                android:layout_marginRight="5dip"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="3dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton_exchagned"
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+            android:layout_margin="5dip"
+            android:adjustViewBounds="true"
+            android:background="@drawable/unitedstates"
+            android:scaleType="fitCenter"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="5dip"
+                android:textColor="#D3B39E"
+                android:textSize="45sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dip" />
+
+    <Button
+        android:id="@+id/buttonSever"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="get exchange rate from sever"
+        android:textSize="20sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@color/colorButton"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="550dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="trans"
+                android:textSize="25sp"
+                android:layout_weight="1"
+                android:id="@+id/buttontrans"
+                android:padding="5dip"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorNumber"/>
+
+            <Button
+                android:text="Clear"
+                android:textSize="25sp"
+                android:layout_weight="1"
+                android:id="@+id/buttonClear"
+                android:onClick="onClick"
+                android:padding="5dip"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorNumber"/>
+
+            <Button
+                android:text="Back"
+                android:textSize="25sp"
+                android:layout_weight="1"
+                android:id="@+id/buttonBack"
+                android:onClick="onClick"
+                android:padding="5dip"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorNumber"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:text="7"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button7"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="8"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button8"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="9"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button9"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:text="4"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button4"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="5"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button5"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="6"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button6"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="1"
+                android:textSize="30sp"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="2"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button2"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:text="3"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button3"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:text="0"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:id="@+id/button0"
+                android:onClick="onClick"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:id="@+id/buttonchange"
+                android:layout_weight="2"
+                android:layout_span="2"
+                android:onClick="onClick"
+                android:text="Change"
+                android:textSize="30sp"
+                android:padding="30dip"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@color/colorNumber"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
