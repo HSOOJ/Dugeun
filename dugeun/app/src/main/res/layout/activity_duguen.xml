@@ -11,7 +11,7 @@
         android:layout_width="360dp"
         android:layout_height="90dp"
         android:layout_marginBottom="30dp"
-        android:text="1.2KG"
+        android:background="@drawable/mainlogo"
         android:textAlignment="center"
         android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
