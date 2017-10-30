@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kmucs.dugeun.mappage">
-
-    <fragment android:name="com.google.android.gms.maps.SupportMapFragment"
-
-        android:id="@+id/map"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-
-        class="com.google.android.gms.maps.MapFragment" />
-
-
-</android.support.constraint.ConstraintLayout>
+    android:id="@+id/map"
+    tools:context=".mappage"
+    android:name="com.google.android.gms.maps.SupportMapFragment" />
