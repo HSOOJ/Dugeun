@@ -20,10 +20,6 @@
 
       -->
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="3dip" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dip"
@@ -31,13 +27,14 @@
 
         <ImageButton
             android:id="@+id/imageButton_current"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dip"
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:adjustViewBounds="true"
             android:background="@drawable/southkorea"
-            android:scaleType="fitCenter"
-            style="?android:attr/borderlessButtonStyle"/>
+            android:onClick="choose_country"
+            android:scaleType="fitCenter" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,11 +50,11 @@
                 android:id="@+id/textValue"
                 android:layout_width="match_parent"
                 android:layout_height="70dip"
+                android:layout_marginRight="5dip"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:maxLength="12"
                 android:text="0"
-                android:layout_marginRight="5dip"
                 android:textColor="#000000"
                 android:textSize="45sp" />
         </LinearLayout>

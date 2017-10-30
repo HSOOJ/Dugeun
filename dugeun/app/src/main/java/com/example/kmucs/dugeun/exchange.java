@@ -1,9 +1,10 @@
 package com.example.kmucs.dugeun;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+//import android.support.v7.widget.Toolbar;
 import android.text.InputFilter;
 import android.view.View;
 import android.widget.TextView;
@@ -136,5 +137,9 @@ public class exchange extends AppCompatActivity {
         mTextValue.setFilters(FilterArray);
     }
 
+    public void choose_country(View v){
+        Intent intent = new Intent(getApplicationContext(), choose_country.class);
+        startActivity(intent);
+    }
 
 }
