@@ -33,7 +33,7 @@
             android:layout_margin="5dip"
             android:adjustViewBounds="true"
             android:background="@drawable/southkorea"
-            android:onClick="choose_country"
+            android:onClick="current"
             android:scaleType="fitCenter" />
 
         <LinearLayout
@@ -72,13 +72,15 @@
 
         <ImageButton
             android:id="@+id/imageButton_exchagned"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dip"
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:adjustViewBounds="true"
             android:background="@drawable/unitedstates"
+            android:onClick="changed"
             android:scaleType="fitCenter"
-            style="?android:attr/borderlessButtonStyle"/>
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,166 +105,160 @@
 
     </LinearLayout>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="15dip" />
-
-    <Button
-        android:id="@+id/buttonSever"
-        android:layout_width="match_parent"
-        android:layout_height="50dip"
-        android:text="get exchange rate from sever"
-        android:textSize="20sp"
-        style="?android:attr/borderlessButtonStyle"
-        android:background="@color/colorButton"/>
-
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="550dp">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
-                android:text="trans"
-                android:textSize="25sp"
-                android:layout_weight="1"
-                android:id="@+id/buttontrans"
-                android:padding="5dip"
+                android:id="@+id/buttonSever"
                 style="?android:attr/borderlessButtonStyle"
-                android:background="@color/colorNumber"/>
+                android:layout_weight="1"
+                android:background="@color/colorNumber"
+                android:padding="5dip"
+                android:text="sever"
+                android:textSize="25sp" />
 
             <Button
-                android:text="Clear"
-                android:textSize="25sp"
-                android:layout_weight="1"
                 android:id="@+id/buttonClear"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:background="@color/colorNumber"
                 android:onClick="onClick"
                 android:padding="5dip"
-                style="?android:attr/borderlessButtonStyle"
-                android:background="@color/colorNumber"/>
+                android:text="Clear"
+                android:textSize="25sp" />
 
             <Button
-                android:text="Back"
-                android:textSize="25sp"
+                android:id="@+id/buttonDel"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_weight="1"
-                android:id="@+id/buttonBack"
+                android:background="@color/colorNumber"
                 android:onClick="onClick"
                 android:padding="5dip"
-                style="?android:attr/borderlessButtonStyle"
-                android:background="@color/colorNumber"/>
+                android:text="Del"
+                android:textSize="25sp" />
         </TableRow>
 
         <TableRow>
+
             <Button
-                android:text="7"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button7"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="7"
+                android:textSize="30sp" />
 
             <Button
-                android:text="8"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button8"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="8"
+                android:textSize="30sp" />
 
             <Button
-                android:text="9"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button9"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="9"
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow>
+
             <Button
-                android:text="4"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button4"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="4"
+                android:textSize="30sp" />
 
             <Button
-                android:text="5"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button5"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="5"
+                android:textSize="30sp" />
 
             <Button
-                android:text="6"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button6"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="6"
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow>
 
             <Button
                 android:id="@+id/button1"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_weight="1"
                 android:onClick="onClick"
+                android:padding="30dip"
                 android:text="1"
-                android:textSize="30sp"
-                android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:textSize="30sp" />
 
             <Button
-                android:text="2"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button2"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="2"
+                android:textSize="30sp" />
 
             <Button
-                android:text="3"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button3"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="3"
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow>
+
             <Button
-                android:text="0"
-                android:textSize="30sp"
-                android:layout_weight="1"
                 android:id="@+id/button0"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
                 android:onClick="onClick"
                 android:padding="30dip"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="0"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/buttonchange"
-                android:layout_weight="2"
-                android:layout_span="2"
-                android:onClick="onClick"
-                android:text="Change"
-                android:textSize="30sp"
-                android:padding="30dip"
                 style="?android:attr/borderlessButtonStyle"
-                android:background="@color/colorNumber"/>
+                android:layout_span="2"
+                android:layout_weight="2"
+                android:background="@color/colorNumber"
+                android:onClick="onClick"
+                android:padding="30dip"
+                android:text="Change"
+                android:textSize="30sp" />
         </TableRow>
     </TableLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dip" />
 
 </LinearLayout>

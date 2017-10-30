@@ -1,6 +1,5 @@
 package com.example.kmucs.dugeun;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +26,16 @@ public class exchange extends AppCompatActivity {
         //환전 후 보여지는 부분 처음에 아무것도 표기하지 않기
         resultValue = (TextView)findViewById(R.id.result);
         resultValue.setText(null);
+    }
+
+    public void current(View v) {
+        Intent intent = new Intent(getApplicationContext(), exchange_current.class);
+        startActivity(intent);
+    }
+
+    public void changed(View v) {
+        Intent intent = new Intent(getApplicationContext(), exchange_exchanged.class);
+        startActivity(intent);
     }
 
     // 입력하는대로 출력
@@ -102,7 +111,7 @@ public class exchange extends AppCompatActivity {
                 break;
 
             //back 버트을 누르면 입력한 숫자 하나 지워짐
-            case R.id.buttonBack : {
+            case R.id.buttonDel : {
                 String strText = mTextValue.getText().toString();
                 int nLength = strText.length();
                 if (nLength > 0) {
@@ -124,10 +133,10 @@ public class exchange extends AppCompatActivity {
             //sever 버튼을 눌렀을 시
             case R.id.buttonSever : {
                 //tet exchange rate from sever버튼을 누르면 "환율 정보가 갱신 되었습니다." 문구가 뜨게하기 - toast
+                Toast.makeText(this, "환율 정보가 갱신 되었습니다.", Toast.LENGTH_LONG).show(); // 왜 안나오지 tid
 
             }
             break;
-
         }
 
         //13자리 입력 할 경우, "12자리까지 입력 가능합니다" 문구가 뜨게 하기 - toast
@@ -137,9 +146,8 @@ public class exchange extends AppCompatActivity {
         mTextValue.setFilters(FilterArray);
     }
 
-    public void choose_country(View v){
-        Intent intent = new Intent(getApplicationContext(), choose_country.class);
-        startActivity(intent);
-    }
+
+
+
 
 }

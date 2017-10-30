@@ -27,10 +27,16 @@
         <activity android:name=".Duguen" />
         <activity android:name=".countrymemo" />
         <activity android:name=".onememo" />
-        <activity android:name=".exchange" />
         <activity android:name=".cashbook" />
         <activity android:name=".mappage" />
         <activity android:name=".we_are"></activity>
+        <activity android:name=".exchange">
+        </activity>
+        <activity android:name=".exchange_current"/>
+        <activity android:name=".exchange_exchanged">
+
+        </activity>
+
     </application>
 
 
