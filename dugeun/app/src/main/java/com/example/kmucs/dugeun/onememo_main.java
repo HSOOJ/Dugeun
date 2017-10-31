@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -90,8 +91,9 @@ public class onememo_main extends AppCompatActivity {
 
     public void deleteTask(View view){
         View parent = (View)view.getParent();
-        TextView taskTextview = (TextView)findViewById(R.id.task_title);
-        String task = String.valueOf(taskTextview.getText());
+        TextView taskTextView = (TextView)parent.findViewById(R.id.task_title);
+        Log.e("String", (String) taskTextView.getText());
+        String task = String.valueOf(taskTextView.getText());
         onememo_.deleteTask(task);
         loadTaskList();
     }
