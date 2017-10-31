@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 
 public class onememo extends SQLiteOpenHelper{
 
@@ -40,5 +42,10 @@ public class onememo extends SQLiteOpenHelper{
         db.close();
     }
 
-    public void deleteTask(String t){}
+    public void deleteTask(String task){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DB_TABLE,DB_COLUMN + "-?", new String[]{task});
+        db.delete();
+    }
+
 }
