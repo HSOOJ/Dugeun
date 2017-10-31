@@ -1,9 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.kmucs.dugeun.cashbook">
 
-</android.support.constraint.ConstraintLayout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/container"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.kmucs.dugeun.cashbook"
+tools:ignore="MergeRootFrame">
+
+    <TextView
+    android:layout_width="67dp"
+    android:layout_height="wrap_content"
+    android:text="제목"
+    android:id="@+id/t_title"
+    android:layout_gravity="left|top"
+    android:textSize="18dp" />
+
+
+
+<EditText
+    android:layout_width="146dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/e_text"
+    android:layout_gravity="center_horizontal|top" />
+
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="저장하기"
+    android:id="@+id/b_save"
+    android:layout_gravity="center_horizontal|bottom" />
+
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="리스트로 보기"
+    android:id="@+id/b_listview"
+    android:layout_gravity="right|bottom" />
+
+
+
+</FrameLayout>
+
+
+
+
+
+
+
+
