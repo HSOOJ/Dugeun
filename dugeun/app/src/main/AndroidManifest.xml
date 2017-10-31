@@ -26,7 +26,7 @@
         </activity>
         <activity android:name=".Duguen" />
         <activity android:name=".countrymemo" />
-        <activity android:name=".onememo" />
+        <activity android:name=".onememo_main" />
         <activity android:name=".cashbook" />
         <activity android:name=".mappage" />
         <activity android:name=".we_are"></activity>

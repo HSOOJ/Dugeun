@@ -2,15 +2,18 @@ package com.example.kmucs.dugeun;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
 
 public class onememo extends SQLiteOpenHelper{
 
-    private  static final String DB_NAME="EDBTDev";
+    private  static final String DB_NAME="EDMTDev";
     private static final int DB_VER = 1;
     public static final String DB_TABLE = "Task";
     public static final String DB_COLUMN ="TaskName";
@@ -22,7 +25,7 @@ public class onememo extends SQLiteOpenHelper{
 
     @Override
     public void onCreate (SQLiteDatabase db){
-        String query = String.format("CREATE TABLE %s (ID INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT NOT NULL", DB_TABLE, DB_COLUMN);
+        String query = String.format("CREATE TABLE %s (ID INTEGER PRIMARY KEY AUTOINCREMENT, %s TEXT NOT NULL);", DB_TABLE, DB_COLUMN);
         db.execSQL(query);
 
     }
@@ -45,7 +48,20 @@ public class onememo extends SQLiteOpenHelper{
     public void deleteTask(String task){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(DB_TABLE,DB_COLUMN + "-?", new String[]{task});
-        db.delete();
+        db.close();
+    }
+
+    public ArrayList<String> getTaskList(){
+            ArrayList<String> taskList = new ArrayList<>();
+            SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(DB_TABLE, new String[]{DB_COLUMN},null,null,null,null,null);
+        while (cursor.moveToNext()){
+            int index = cursor.getColumnIndex(DB_COLUMN);
+            taskList.add(cursor.getString(index));
+        }
+        cursor.close();
+        db.close();
+        return taskList;
     }
 
 }
