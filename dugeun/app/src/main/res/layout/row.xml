@@ -13,10 +13,11 @@
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:onClick="deleteTask"
-        android:text="DELETE" />
+        android:text="삭제" />
 </RelativeLayout>

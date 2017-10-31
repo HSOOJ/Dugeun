@@ -72,7 +72,7 @@ public class onememo_main extends AppCompatActivity {
                         .setTitle("메모 추가")
                         .setMessage("무엇을 기록할까요?")
                         .setView(taskEditText)
-                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("저장", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
@@ -80,7 +80,7 @@ public class onememo_main extends AppCompatActivity {
                                 loadTaskList();
                             }
                         })
-                        .setNegativeButton("Cancel",null)
+                        .setNegativeButton("취소",null)
                         .create();
                 dialog.show();
                 return true;
