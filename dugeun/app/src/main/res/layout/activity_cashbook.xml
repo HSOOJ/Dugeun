@@ -17,7 +17,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="날짜" />
+            android:text="날짜"
+            android:textColor="#D3B39E" />
 
         <EditText
             android:id="@+id/date"
@@ -25,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:clickable="false"
-            android:focusable="false" />
+            android:focusable="false"
+            android:textColorLink="#D3B39E" />
 
     </LinearLayout>
 
@@ -37,13 +39,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="항목" />
+            android:text="항목"
+            android:textColor="#D3B39E"
+            android:textColorLink="#D3B39E" />
 
         <EditText
             android:id="@+id/item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp" />
+            android:layout_marginLeft="16dp"
+            android:textColorLink="#D3B39E" />
 
     </LinearLayout>
 
@@ -55,14 +60,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가격" />
+            android:text="가격"
+            android:textColor="#D3B39E" />
 
         <EditText
             android:id="@+id/price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColorLink="#D3B39E" />
 
     </LinearLayout>
 
@@ -71,31 +78,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp">
 
-        <Button
+        <ImageButton
             android:id="@+id/insert"
+            android:background="@drawable/add"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:text="추가" />
 
-        <Button
+        <ImageButton
             android:id="@+id/delete"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
+            android:background="@drawable/delete"
             android:text="삭제" />
 
-        <Button
+        <ImageButton
             android:id="@+id/update"
+            android:background="@drawable/modify"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:text="수정" />
 
-        <Button
+        <ImageButton
             android:id="@+id/select"
+            android:background="@drawable/search"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:text="조회" />
 
