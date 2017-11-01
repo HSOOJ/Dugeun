@@ -120,6 +120,7 @@
                 android:background="@color/colorNumber"
                 android:padding="5dip"
                 android:text="sever"
+                android:onClick="sever"
                 android:textSize="25sp" />
 
             <Button

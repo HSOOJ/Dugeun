@@ -38,6 +38,10 @@ public class exchange extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void sever(View v) {
+        Toast.makeText(this, "환율 정보가 갱신 되었습니다.", Toast.LENGTH_LONG).show(); // 왜 안나오지 tid
+    }
+
     // 입력하는대로 출력
     public float getTextValueFloat() {
         float fValue = 0.f;
