@@ -14,6 +14,14 @@
     <ListView
         android:id="@+id/lstTask"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="왼쪽 상단의 + 버튼을 눌러 메모를 추가하세요."
+        android:paddingTop="600dp"/>
+
 
 </android.support.constraint.ConstraintLayout>
