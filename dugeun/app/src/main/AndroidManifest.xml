@@ -35,10 +35,6 @@
         <activity android:name=".exchange">
         </activity>
 
-        <activity android:name=".exchange_current"/>
-        <activity android:name=".exchange_exchanged">
-        </activity>
-
 
     </application>
 
