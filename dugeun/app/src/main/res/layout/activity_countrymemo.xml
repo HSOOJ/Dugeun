@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jiwon.newapp.countrymemo">
+    android:background="#ffffffff"
+    tools:context="com.example.kmucs.dugeun.countrymemo">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ffffffff"
+        >
+
+        <TextView
+            android:id="@+id/titleBackgroundBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:text="사진과 함께 기록하세요!"
+            android:textAlignment="center"
+            android:textColor="#C59B7F"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/memoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_margin="4dp"
+        android:divider="#00000000"
+        android:listSelector="#00000000"
+        android:cacheColorHint="#00000000"/>
+
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/buttonLayouts"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/newMemoBtn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/memoadd" />
+
+            <Button
+                android:id="@+id/closeBtn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/mclose" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
