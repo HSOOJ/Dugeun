@@ -25,26 +25,16 @@
         android:layout_height="100dip"
         android:orientation="horizontal">
 
-
-        <LinearLayout
-            android:layout_width="110dip"
+        <ImageButton
+            android:id="@+id/imageButton_current"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dip"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Spinner
-                android:id="@+id/before"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dip" />
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listView">
-            </ListView>
-
-
-        </LinearLayout>
+            android:layout_margin="5dip"
+            android:adjustViewBounds="true"
+            android:background="@drawable/southkorea"
+            android:onClick="current"
+            android:scaleType="fitCenter" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,13 +70,17 @@
         android:layout_height="100dip"
         android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/after"
+        <ImageButton
+            android:id="@+id/imageButton_exchagned"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dip"
             android:layout_height="match_parent"
-            android:layout_margin="5dip"/>
-
-        />
+            android:layout_margin="5dip"
+            android:adjustViewBounds="true"
+            android:background="@drawable/unitedstates"
+            android:onClick="changed"
+            android:scaleType="fitCenter"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
